@@ -151,10 +151,12 @@ GameManager.prototype.move = function (direction) {
       if (tile) {
         var positions = self.findFarthestPosition(cell, vector);
         var next      = self.grid.cellContent(positions.next);
-
+        var checkValid = window.MyCheckValid || function(next, tile){
+          return next && next.value === tile.value && !next.mergedFrom;
+        }
         // Only one merger per row traversal?
-        if (next && next.value === tile.value && !next.mergedFrom) {
-          var merged = new Tile(positions.next, tile.value * 2);
+        if (checkValid(next, tile)) {
+          var merged = new Tile(positions.next, Math.max(tile.value, next.value) * 2);
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);
