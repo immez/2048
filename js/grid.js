@@ -5,13 +5,13 @@ function Grid(size, previousState) {
 }
 
 Grid.prototype.getNewValue = function (){
-  return Math.random() < 0.9 ? 2 : 2*2;
+  if(!easyMode){
+    return Math.random() < 0.9 ? 2 : 2*2;
+  }
   var scale = this.getMaxScore()/16;
   scale = scale > 1 ? scale : 1;
   var value = 2*scale;
   value = Math.min(this.getMinScore(), value);
-  console.log(this.vals);
-  console.log(value);
   return Math.random() < 0.9 ? value : value*2;
 }
 
