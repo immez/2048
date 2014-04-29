@@ -1,33 +1,33 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>2048</title>
-  <link href="style/main-4.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <title>2048 - 图片测试</title>
+  <link href="http://immez.github.io/2048/style/main-5.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="http://immez.github.io/2048/favicon.ico">
+  <link rel="apple-touch-icon" href="http://immez.github.io/2048/meta/apple-touch-icon.png">
+  <style>.button{color:white;text-decoration:none;padding:10px;margin:auto;background:#8f7a66;border:2px solid #000;}</style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="heading">
-      <h1 class="title">好吧</h1>
-      <p class="game-intro">就是好吧</p>
+      <h1 class="title">图片测试</h1>
+      <p class="game-intro">图片测试</p>
     </div>
     <div class="above-game">
-      <a class="restart-button">New Game</a>
+      <a class="restart-button">重新开始游戏</a>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
       </div>
     </div>
-
     <div class="game-container">
       <div class="game-message">
         <p></p>
         <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+	        <a class="keep-playing-button">继续游戏</a>
+          <a class="retry-button">重新开始</a>
         </div>
       </div>
 
@@ -37,11 +37,6 @@
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
-                </div>
-              <div class="grid-row">
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
-                  <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                 </div>
               <div class="grid-row">
@@ -49,8 +44,24 @@
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
                 </div>
               <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              <div class="grid-row">
+                  <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
                   <div class="grid-cell"></div>
@@ -61,8 +72,9 @@
       <div class="tile-container">
       </div>
     </div>
-    
     <hr>
+    <div style="text-align:center;"><button id="extra">隐藏提示信息</button></div>
+    <div class="extra">
     <p>
     文案创意：
             <a href="http://weibo.com/n/harryzuo" target="_blank">@harryzuo</a>
@@ -71,44 +83,82 @@
     程序修改：
       <a href="http://weibo.com/harrz" target="_blank">@harryzuo</a>
     </p>
+    <p>创建于[2014-03-26 14:32]，访问人数:77008 </p>
 
-    <hr>
-    <p><a href="/2048">没玩够，我再去创建一个新游戏</a></p>
-
-    <hr>
-    <p>程序员同学说：</p>
-    <p>我没有去申请sae的实名认证，所以这个空间的访问频率有限制，5分钟500次，大家刷新的时候悠着点……</p>
-    <p>文案创意的版权和责任都属于创意贡献者，但是如果发现有不合适的内容，我会删除</p>
-    <p>现在用图片链接替换文本，支持自动替换成图片，<a href="/2048/play?code=1d9e40efb2" target="_blank">可以戳这里看看效果</a></p>
+    <hr/>
+    <button id="easyMode_switcher_A">开启简单模式A</button>
+    <button id="easyMode_switcher_B">@齐梁后尘 建议的简单模式B</button>
+    <hr/>
+    <p><a href="/2048/edit" class="button">没玩够，我再去创建一个新游戏</a></p>
+    <hr/>
+    <p><a href="/2048/play/top100" class="button">人气Top100(访问2000以上)的游戏列表</a></p>
+    <hr/>
+    <p><a href="/2048/play/random" class="button">随机看一个人气Top100(访问2000以上)的游戏</a></p>
+    <p>(如果有同学创建的游戏不想在这里公开请联系我，不过访问都2000以上了应该没有这个顾虑吧)</p>
+    <hr/>
+    <p style="font-size:36px;color:red;font-weight:bold;">珍爱生命，适度游戏……2048以上的追求都太浪费时间了</p>
+    <p>文案创意的版权和责任都属于创意贡献者，但是如果发现有不合适的内容或者有人举报投诉，我会视情况删除</p>
+    <p>用图片链接替换文本，可以自动替换成图片，<a href="/2048/play?code=1d9e40efb2" target="_blank">看看效果</a></p>
     <p>源代码打包下载请去微盘 <a href="http://vdisk.weibo.com/s/vr3ztN1dKdRw/1396315346" target="_blank">2048.zip</a></p>
-    <p style="font-size:36px;color:red;font-weight:bold;">珍爱生命，适度游戏……同学们拿自己喜欢的版本偶尔玩个十来分钟可以理解，时间再长就有点浪费生命了啊……</p>
-    <p>但是这个游戏好像是挺容易让人停不下来……越到后面越翻倍地浪费时间啊，是不是改改后面的算法比较好？欢迎大家提建议……</p>
-    <p style="font-size:36px;color:red;font-weight:bold;">大家至少不要沉迷于尝试挑战16384之后的高度吧，这只是耗时间（每一次有效按键+2，要加到16384要按8000多下，一秒钟5下也要半个多小时，每提升一级需要的时间都翻倍）</p>
-        <hr>
+    <hr/>
     <p>
     <strong class="important">Note:</strong> This site is <span style="color:red;font-weight:bold;">NOT</span> the official version of 2048. The origin version is created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
     </p>
-</div>
+    </div>
+  </div>
   <script>
     var my_list = {2:'好',4:'真好',8:'很好',16:'非常好',32:'好的很',64:'太好了',128:'好极了',256:'就是好',512:'实在是好',1024:'大家都说好',2048:'好到没话说',4096:'好好好好好',8192:'~~~~',16384:'8192',32768:'16384',65536:'32768',131072:'65536',262144:'131072',524288:'262144',1048576:'524288',2097152:'1048576',4194304:'2097152',8388608:'4194304',16777216:'8388608',33554432:'16777216',67108864:'33554432',134217728:'67108864',268435456:'134217728',536870912:'268435456',1073741824:'536870912',2147483648:'1073741824'}
     var my_mark = {2:'好',4:'真好',8:'很好',16:'非常好',32:'好的很',64:'太好了',128:'好极了',256:'就是好',512:'实在是好',1024:'大家都说好',2048:'好到没话说',4096:'好好好好好',8192:'~~~~',16384:'8192',32768:'16384',65536:'32768',131072:'65536',262144:'131072',524288:'262144',1048576:'524288',2097152:'1048576',4194304:'2097152',8388608:'4194304',16777216:'8388608',33554432:'16777216',67108864:'33554432',134217728:'67108864',268435456:'134217728',536870912:'268435456',1073741824:'536870912',2147483648:'1073741824'}
     var my_goal = 2048;
     var my_win  = 'You Win!';
+    var easyMode = false;
+    var MyCheckValid = null;
+    $('#easyMode_switcher_A').click(function(){
+      if(!confirm('开启简单模式A后，最大方块值超过32后，新产生的方块值将不小于min(最小方块值, 最大方块值/16)\n即使重新开始游戏也是如此，除非刷新页面\n确认开启？')){return false;}
+      easyMode = true;
+      $(this).text('简单模式A已开启');
+      return false;
+    });
+    $('#easyMode_switcher_B').click(function(){
+      if(!confirm('开启简单模式B后，最大的方块和相邻方块相差倍数不超过4倍就可以合并')){return false;}
+      MyCheckValid = function(next, tile, self){
+        return next && !next.mergedFrom && (
+          Math.max(next.value, tile.value) == self.grid.getMaxScore() ?
+          (Math.max(next.value, tile.value) <= 4*Math.min(next.value, tile.value)) :
+          next.value == tile.value
+          );
+        //return next && !next.mergedFrom && (Math.max(next.value, tile.value) <= 2*Math.min(next.value, tile.value));
+      };
+      $(this).text('简单模式B已开启');
+      return false;
+    });
   </script>
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
+  <script src="http://immez.github.io/2048/js/bind_polyfill.js"></script>
+  <script src="http://immez.github.io/2048/js/classlist_polyfill.js"></script>
+  <script src="http://immez.github.io/2048/js/animframe_polyfill.js"></script>
+  <script src="http://immez.github.io/2048/js/keyboard_input_manager.js"></script>
+  <script src="http://immez.github.io/2048/js/html_actuator.js"></script>
+  <script src="http://immez.github.io/2048/js/grid.js"></script>
+  <script src="http://immez.github.io/2048/js/tile.js"></script>
+  <script src="http://immez.github.io/2048/js/local_storage_manager.js"></script>
+  <script src="http://immez.github.io/2048/js/game_manager.js"></script>
   <script>
     // Wait till the browser is ready to render the game (avoids glitches)
     window.requestAnimationFrame(function (){
-      var game = new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
-          });  
-  </script>
+      var game = new GameManager(5, KeyboardInputManager, HTMLActuator, LocalStorageManager);
+          });
+    var extra = true;
+    $('#extra').click(function(){
+      if(extra){
+        $('.extra').hide();
+        $(this).text('显示提示信息');
+      }else{
+        $('.extra').show();
+        $(this).text('隐藏提示信息');
+      }
+      extra = !extra;
+      return false;
+    })
+      </script>
 </body>
 </html>
